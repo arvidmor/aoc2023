@@ -19,7 +19,7 @@ setup:
 		continue;\
 	fi;\
 	mkdir $$day;\
-	cat template.c > $$day/day$$day.c;\
+	cat template.c > $$day/$$day.c;\
 	touch $$day/input.txt;\
 
 
