@@ -11,15 +11,17 @@ $(EXES): $(SRCS)
 	done
 
 setup: 
-	@for day in {1..24}; do \
-		if [ -d day$$day ]; then \
-			echo "day$$day already exists";\
-			continue;\
-		fi;\
-		mkdir day$$day;\
-		cat template.c > day$$day/day$$day.c;\
-		touch day$$day/input.txt;\
-	done
+	@echo "Which day?"
+	@read -i "day" day;\
+	day="day$$day";\
+	if [ -d day$$day ]; then \
+		echo "$$day already exists";\
+		continue;\
+	fi;\
+	mkdir $$day;\
+	cat template.c > $$day/day$$day.c;\
+	touch $$day/input.txt;\
+
 
 run:
 	@echo "Which day?"
