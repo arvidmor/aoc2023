@@ -1,2 +1,2 @@
-*.out
-*/input.txt
+**/*.out
+**/input.txt
